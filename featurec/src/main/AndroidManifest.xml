@@ -6,9 +6,8 @@
         <activity android:name=".FeatureCActivity"
             android:label="@string/module_c_name">
             <intent-filter>
-                <action android:name="cl.cutiko.MULTINAV.CUSTOM_ACTION" />
+                <action android:name="${navigationAction}" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="example" android:host="moultinav" />
             </intent-filter>
         </activity>
     </application>

@@ -5,6 +5,10 @@
     <application>
         <activity android:name=".FeatureBActivity"
             android:label="@string/module_b_name">
+            <intent-filter>
+                <action android:name="${navigationAction}" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
