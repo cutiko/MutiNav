@@ -1,12 +1,13 @@
 package cl.cutiko.featurea;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import cl.cutiko.shared.Dog;
+import cl.cutiko.shared.navigation.FeatureB;
+import cl.cutiko.shared.navigation.FeatureC;
 
 public class FeatureAActivity extends AppCompatActivity {
 
@@ -18,23 +19,16 @@ public class FeatureAActivity extends AppCompatActivity {
         btnToB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(FeatureAActivity.this, Class.forName("cl.cutiko.featureb.FeatureBActivity"));
-                    startActivity(intent);
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
+                startActivity(new Intent(FeatureB.ACTION));
             }
         });
         findViewById(R.id.cBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction("cl.cutiko.MULTINAV.CUSTOM_ACTION");
-                intent.putExtra("KEY_A", "hello");
-                Dog dog = new Dog("Do have 3 legs", 3);
-                intent.putExtra("KEY_A_DOG", dog);
-                intent.setData(Uri.parse("example://moultinav"));
+                Intent intent = new Intent(FeatureC.ACTION);
+                intent.putExtra(FeatureC.STRING_KEY_EXAMPLE, "This is a String data");
+                Dog dog = new Dog("The name is Fido, legs: ", 3);
+                intent.putExtra(FeatureC.STRING_SERIALIZABLE_EXAMPLE, dog);
                 startActivity(intent);
             }
         });
