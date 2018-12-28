@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cl.cutiko.featurec">
+
+    <application>
+        <activity android:name=".FeatureCActivity"
+            android:label="@string/module_c_name">
+            <intent-filter>
+                <action android:name="cl.cutiko.MULTINAV.CUSTOM_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="example" android:host="moultinav" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

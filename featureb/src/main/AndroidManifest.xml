@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cl.cutiko.featureb">
+
+    <application>
+        <activity android:name=".FeatureBActivity"
+            android:label="@string/module_b_name">
+        </activity>
+    </application>
+
+</manifest>
